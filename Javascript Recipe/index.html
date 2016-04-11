@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js""></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/>
+		
+		<script type="text/javascript" src="ph_tables.js"></script>
+	</head>
+	<body>
+		<table id="data_table" class="display" cellspacing="0" width="100%"></table>
+		<p>Data retrieved from: <a href="https://www.parsehub.com/sandbox/navmovies2">https://www.parsehub.com/sandbox/navmovies2</a></p>
+		<script type="text/javascript">
+
+$(document).ready(function() {
+	var table_id = "#data_table";
+	var json_url = "latest_data.json"; //nb: must be located on same domain!
+	var base_list = "movies";
+	fill_table(table_id, json_url, base_list)
+} );
+		
+		</script>
+	</body>
+</html>
